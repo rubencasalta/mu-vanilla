@@ -13,19 +13,19 @@
 	function add_theme_scripts()
 	{
 		// CSS
-			// Bootstrap
-			wp_register_style( 'bootstrap-cdn', 'https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css', array(), NULL, 'all' );
-
 			// Theme
-			wp_register_style( 'theme', get_template_directory_uri() . '/assets/theme/css/theme.css', array(), NULL, 'all' );
+			wp_register_style( 'theme', get_template_directory_uri() . '/assets/theme/css/theme.min.css', array(), NULL, 'all' );
 
-			// Encolar todos los estilos
-			wp_enqueue_style( array('bootstrap-cdn', 'theme') );
+			// Hay veces que el cliente quiere tocar css.
+			wp_register_style( 'custom', get_template_directory_uri() . '/assets/theme/css/custom.css', array(), NULL, 'all' );
+
+			// Encolando estilos.
+			wp_enqueue_style( array('theme', 'custom') );
 		// ---
 
 		// JS
 			// Bootstrap
-			wp_register_script( 'bootstrap-cdn', 'https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js', FALSE, NULL, TRUE);
+			wp_register_script('bootstrap-cdn', 'https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js', '', '0', TRUE);
 
 			// Theme
 			wp_register_script( 'theme', get_template_directory_uri() . '/assets/theme/js/theme.js', FALSE, NULL, TRUE);

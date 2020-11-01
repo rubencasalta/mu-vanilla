@@ -1,29 +1,35 @@
-// out: ../css/theme.css, compress: true
+// out: ../css/theme.min.css, compress: true
 
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&family=Montserrat:wght@400;600&display=swap');
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css");
+
+$font-primary: 'Montserrat', sans-serif;
+$font-secondary: 'Montserrat Alternates', sans-serif;
 
 body
 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: $font-primary;
 }
 
 .front-page
 {
+	text-align: center;
+
 	.front-page__title
 	{
-		font-family: 'Anton', sans-serif;
-		font-size: 32px;
+		font-family: $font-secondary;
+		font-size: 3rem;
 		text-align: center;
 		margin-bottom: 15px;
 	}
 
 	.front-page__image
 	{
-		padding: 5px;
-		border: 1px solid #aaa;
-		margin-bottom: 30px;
+		//padding: 5px;
+		//border: 1px solid #aaa;
+		//margin-bottom: 30px;
 		border-radius: 5px;
+		margin-bottom: 30px;
 	}
 }
-
-@import '../css/custom.css';
