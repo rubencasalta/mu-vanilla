@@ -1,18 +1,24 @@
 // out: ../css/theme.css, compress: true
 
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;600&display=swap');
+@import url('https://unpkg.com/ed-grid@3.0.0/src/css/ed-grid.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&family=Montserrat:wght@400;600&display=swap');
+
+$font-primary: 'Montserrat', sans-serif;
+$font-secondary: 'Montserrat Alternates', sans-serif;
 
 body
 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: $font-primary;
 }
 
 .front-page
 {
+	text-align: center;
+
 	.front-page__title
 	{
-		font-family: 'Anton', sans-serif;
-		font-size: 32px;
+		font-family: $font-secondary;
+		font-size: 48px;
 		text-align: center;
 		margin-bottom: 15px;
 	}
