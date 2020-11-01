@@ -3,7 +3,7 @@
 
 <div class="container">
 	<div class="row">
-		<div class="article col-md-8">
+		<section class="article col-md-8">
 			<article class="front-page">
 				<?php the_title( '<h2 class="front-page__title">', '</h2>' ); ?>
 				<?php if (has_post_thumbnail( $post->ID ) ): ?>
@@ -14,10 +14,10 @@
 					<?php the_content() ?>
 				</div>
 			</article>
-		</div>
-		<div class="article col-md-2">
+		</section>
+		<section class="article col-md-2">
 
-		</div>
+		</section>
 	</div>
 </div>
 
