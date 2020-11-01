@@ -2,4 +2,4 @@
 Es un theme para wordpress que me sirve de base para desarrollar el resto.
 
 ## Necesidades
-Tener instalado y **activadp** el ACF Pro.
+Tener instalado y **activado** el _ACF Pro_.
