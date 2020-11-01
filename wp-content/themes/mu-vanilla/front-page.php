@@ -8,7 +8,7 @@
 			<?=render_block( $block )?>
 		<?php else : ?>
 			<div class="container">
-				<?=do_shortcode( $block['innerHTML'] )?>
+				<?=apply_filters( 'the_content', render_block( $block ) )?>
 			</div>
 		<?php endif; ?>
 	<?php endforeach; ?>

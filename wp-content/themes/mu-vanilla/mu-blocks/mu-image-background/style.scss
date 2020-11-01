@@ -2,7 +2,7 @@
 
 .mu-block-image-background
 {
-    margin: 0 0 30px 0;
+    margin: 0;
     position: relative;
 
     &.no-margin
@@ -41,7 +41,16 @@
 					margin-bottom: 0;
 				}
 			}
-        }
+		}
+
+		@media (max-width: 768px) {
+
+			.capsule-inner
+			{
+				padding: 5%;
+			}
+
+		}
 
         background-position: center center;
         background-repeat: no-repeat;

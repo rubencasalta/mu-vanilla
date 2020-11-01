@@ -83,6 +83,8 @@
 		add_filter('menu_order', 'mu\custom_menu_order');
 	// ---
 
-
-
-/* --- */
+	function do_shortcode_gutemberg($block_content, $block)
+	{
+		return do_shortcode($block_content);
+	}
+	add_filter( 'render_block', 'mu\do_shortcode_gutemberg', 99, 2 );
