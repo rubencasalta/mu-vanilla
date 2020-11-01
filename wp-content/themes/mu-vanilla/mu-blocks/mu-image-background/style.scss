@@ -1,0 +1,126 @@
+//out: style.min.css, compress: true
+
+.mu-block-image-background
+{
+    margin: 0 0 30px 0;
+    position: relative;
+
+    &.no-margin
+    {
+        margin: 0;
+    }
+
+    .capsule-content
+    {
+        display: table;
+        width: 100%;
+        min-height: 50vh;
+        z-index: 1;
+        position: relative;
+
+        .capsule-inner
+        {
+            //background-color: rgba(255,255,255,0.5);
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+			padding: 5% 20%;
+			text-shadow: 0 0 4px #000;
+			color: #fff;
+
+			h2
+			{
+				font-size: 42px;
+				font-weight: 600;
+			}
+
+			p
+			{
+				&:last-child
+				{
+					margin-bottom: 0;
+				}
+			}
+        }
+
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &.height-big
+    {
+        .capsule-content
+        {
+            min-height: 80vh;
+        }
+    }
+
+
+    &.horizontal-left
+    {
+        .capsule-content
+        {
+            .capsule-inner
+            {
+                text-align: left;
+            }
+        }
+    }
+
+    &.horizontal-center
+    {
+        .capsule-content
+        {
+            .capsule-inner
+            {
+                text-align: center;
+            }
+        }
+    }
+
+    &.horizontal-right
+    {
+        .capsule-content
+        {
+            .capsule-inner
+            {
+                text-align: right;
+            }
+        }
+    }
+
+    &.vertical-top
+    {
+        .capsule-content
+        {
+            .capsule-inner
+            {
+                vertical-align: top;
+            }
+        }
+    }
+
+    &.vertical-middle
+    {
+        .capsule-content
+        {
+            .capsule-inner
+            {
+                vertical-align: middle;
+            }
+        }
+    }
+
+    &.vertical-bottom
+    {
+        .capsule-content
+        {
+            .capsule-inner
+            {
+                vertical-align: bottom;
+            }
+        }
+    }
+
+}

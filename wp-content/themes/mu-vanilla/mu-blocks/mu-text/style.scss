@@ -2,5 +2,24 @@
 
 .mu-block-text
 {
-	margin: 0;
+	margin-bottom: 30px;
+	background-color: #fafafa;
+
+	.mu-block-text__content
+	{
+		p
+		{
+			&:last-child
+			{
+				margin-bottom: 0;
+			}
+		}
+
+		img
+		{
+			width: 100%;
+			height: auto;
+			border-radius: 8px;
+		}
+	}
 }

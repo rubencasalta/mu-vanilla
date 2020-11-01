@@ -36,7 +36,7 @@
 
             foreach ($registered_blocks as $b_key => $b_value)
             {
-                if (preg_match('#^acf/musca-#', $b_value) === 1)
+                if (preg_match('#^acf/mu-#', $b_value) === 1)
                 {
                     $allowed_blocks[] = $b_value;
                 }

@@ -2,18 +2,17 @@
 
 	// Definición
 		$args =	array(
-			'name'				=> 'mu-container',
-			'title'				=> __('Contenedor', 'mu-domain'),
-			'description'		=> __('Bloque: Contenedor', 'mu-domain'),
-			'category'			=> 'mu-blocks',
-			'icon'				=> 'block-default',
-			'keywords'			=> array( 'grupo' ),
-			'supports'			=> array(
-										//'mode'  => false,
-										'align' => true,
-										'jsx' => true,
-									),
-		);
+						'name'				=> 'mu-image-background',
+						'title'				=> __('Imagen de fondo', 'mu-domain'),
+						'description'		=> __('Bloque: Imagen de fondo', 'mu-domain'),
+						'category'			=> 'mu-blocks',
+						'icon'				=> 'block-default',
+						'keywords'			=> array( 'imagen', 'fondo' ),
+						'supports'			=> array(
+													//'mode'  => false,
+													'align' => false,
+												),
+					);
 	// ---
 
 	// Registro

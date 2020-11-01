@@ -21,23 +21,21 @@
 
 	// Variables
 		$text_content = get_field('block_text_content');
-		$block_fullsize = get_field('block_text_fullsize');
+		$fullsize = get_field('block_fullsize');
 	// ---
 
 ?>
 <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
 
-    <?php if( !$block_fullsize ) : ?>
-        <div class="container">
-    <?php else : ?>
-        <div class="container-fluid">
-    <?php endif; ?>
+	<?php if( !$fullsize ) : ?>
+		<div class="container">
+	<?php else : ?>
+		<div class="container-fluid p-0">
+	<?php endif; ?>
 
-		<div class="capsule-content align-self-center">
+		<div class="<?=$name?>__content align-self-center p-3">
 			<?=$text_content?>
 		</div>
-
-		<InnerBlocks  />
 
     </div>
 
