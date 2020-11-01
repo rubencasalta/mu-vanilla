@@ -1,0 +1,1 @@
+<?php _e( 'Lo sentimos, ninguna entrada coincide con tus criterios.', 'mu-domain' ); ?>

@@ -1,0 +1,12 @@
+/*
+!wp-content
+!.gitignore
+!.editorconfig
+!README.md
+!.htaccess
+node_modules
+wp-content/*
+
+!wp-content/themes
+wp-content/themes/*
+!wp-content/themes/mu-vanilla
