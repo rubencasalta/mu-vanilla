@@ -67,13 +67,8 @@
 					}
 				}
 
-				function acf_init()
-				{
-					/* GOOGLE MAP */
-					acf_update_setting('google_api_key', $google_api_key);
-					/* --- */
-				}
-				add_action('acf/init', 'mu\init\acf_init');
+				// Google Map
+				acf_update_setting('google_api_key', $google_api_key);
 
 				add_filter('acf/settings/row_index_offset', '__return_zero');
 			}
