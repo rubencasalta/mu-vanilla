@@ -45,14 +45,6 @@
 		/* ACF */
 			if ( class_exists('ACF') )
 			{
-				function acf_init()
-				{
-					/* GOOGLE MAP */
-					acf_update_setting('google_api_key', 'KEY');
-					/* --- */
-				}
-				add_action('acf/init', 'mu\init\acf_init');
-
 				/* Configuración  */
 				acf_add_options_page(	array(
 											'page_title'  => __('Configuración','mu-domain'),
@@ -74,6 +66,14 @@
 						${$k} = $v;
 					}
 				}
+
+				function acf_init()
+				{
+					/* GOOGLE MAP */
+					acf_update_setting('google_api_key', $google_api_key);
+					/* --- */
+				}
+				add_action('acf/init', 'mu\init\acf_init');
 
 				add_filter('acf/settings/row_index_offset', '__return_zero');
 			}
