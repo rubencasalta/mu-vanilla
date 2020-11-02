@@ -87,6 +87,7 @@
 							'index.php',
 							'edit.php',
 							'edit.php?post_type=page',
+							'edit.php?post_type=mu-book',
 							'upload.php'
 						);
 		}
