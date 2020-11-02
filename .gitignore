@@ -3,7 +3,6 @@
 !.gitignore
 !.editorconfig
 !README.md
-!LICENSE.md
 !.htaccess
 node_modules
 wp-content/*
