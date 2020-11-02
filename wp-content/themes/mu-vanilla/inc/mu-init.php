@@ -48,7 +48,7 @@
 				function acf_init()
 				{
 					/* GOOGLE MAP */
-					acf_update_setting('google_api_key', 'AIzaSyB2pgu2kjdfBI-laao4VBJUQkhouFEkwRk');
+					acf_update_setting('google_api_key', 'KEY');
 					/* --- */
 				}
 				add_action('acf/init', 'mu\init\acf_init');
