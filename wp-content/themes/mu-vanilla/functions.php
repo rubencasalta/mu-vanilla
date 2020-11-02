@@ -7,7 +7,14 @@
 	require_once( __DIR__ . '/inc/mu-init.php');
 	require_once( __DIR__ . '/inc/mu-junk.php');
 	require_once( __DIR__ . '/inc/mu-admin.php');
+	require_once( __DIR__ . '/inc/class-wp-bootstrap-navwalker.php');
+	require_once( __DIR__ . '/inc/johnbillion/extended-cpts/extended-cpts.php');
 	require_once( __DIR__ . '/mu-blocks/mu-blocks.php');
+
+
+	require_once( __DIR__ . '/mu-cpt/mu-story.php');
+
+
 
 
 	function add_theme_scripts()
@@ -40,6 +47,11 @@
 	}
 	add_action( 'wp_enqueue_scripts', 'mu\add_theme_scripts' );
 
+	// Registrar menús
+		register_nav_menus( array(
+			'primary' => __( 'Menú principal', 'mu-domain' ),
+			'secondary' => __( 'Menú secundario', 'mu-domain' ),
+		) );
 
 
 	// Media
