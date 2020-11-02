@@ -3,7 +3,14 @@
 .mu-block-image-background
 {
     margin: 0;
-    position: relative;
+	position: relative;
+	font-size: 1em;
+
+	@media (max-width: 768px) {
+
+		font-size: 0.8em;
+
+	}
 
     &.no-margin
     {
@@ -30,18 +37,24 @@
 
 			h2
 			{
-				font-size: 42px;
+				font-size: 2.5em;
 				font-weight: 600;
 			}
 
 			p
 			{
+				font-size: 1em;
+
 				&:last-child
 				{
 					margin-bottom: 0;
 				}
 			}
 		}
+
+        background-position: center center;
+        background-repeat: no-repeat;
+		background-size: cover;
 
 		@media (max-width: 768px) {
 
@@ -51,10 +64,6 @@
 			}
 
 		}
-
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
     }
 
     &.height-big
