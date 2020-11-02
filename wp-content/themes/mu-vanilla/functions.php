@@ -13,7 +13,7 @@
 	function add_theme_scripts()
 	{
 		// CSS
-			// Theme
+			// Theme y Bootstrap
 			wp_register_style( 'theme', get_template_directory_uri() . '/assets/theme/css/theme.min.css', array(), NULL, 'all' );
 
 			// Hay veces que el cliente quiere tocar css.
@@ -40,7 +40,51 @@
 	}
 	add_action( 'wp_enqueue_scripts', 'mu\add_theme_scripts' );
 
-	// Tamaños de imagenes
-		add_image_size( 'header', 1200, 675, TRUE ); // Para las cabeceras
-		add_image_size( 'list', 600, 375, TRUE ); // Para los listados
+
+
+	// Media
+		function jpeg_quality()
+		{
+			return 75;
+		}
+		add_filter( 'jpeg_quality', 'mu\jpeg_quality');
+
+		function set_media()
+		{
+			// Tamaños de imagenes
+				add_image_size( 'header', 1200, 675, TRUE ); // Para las cabeceras
+				add_image_size( 'list', 600, 375, TRUE ); // Para los listados
+		}
+		add_action('init', 'mu\set_media');
 	// ---
+
+	/* Menú / Admin */
+		function remove_menu_pages()
+		{
+			// Posts / Entradas
+			remove_menu_page('edit.php');
+			// Comentarios
+			remove_menu_page('edit-comments.php');
+		}
+		add_action('admin_menu', 'mu\remove_menu_pages');
+
+		function custom_menu_order($menu_ord)
+		{
+			if (!$menu_ord) return true;
+			return array(
+							'index.php',
+							'edit.php',
+							'edit.php?post_type=page',
+							'upload.php'
+						);
+		}
+
+		add_filter('custom_menu_order', 'mu\custom_menu_order');
+		add_filter('menu_order', 'mu\custom_menu_order');
+	// ---
+
+	function do_shortcode_gutemberg($block_content, $block)
+	{
+		return do_shortcode($block_content);
+	}
+	add_filter( 'render_block', 'mu\do_shortcode_gutemberg', 99, 2 );

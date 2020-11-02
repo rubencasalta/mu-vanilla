@@ -26,11 +26,55 @@
 
             return $sizes;
 		} );
-
-        // Theme supports
-			add_theme_support('post-thumbnails'); // Añade thumbnails
-			add_theme_support('align-wide');
-		// ---
-
-
 	// ---
+
+	/* SETUP */
+	function after_setup_theme()
+	{
+		show_admin_bar(false);
+
+		/* WP SUPPORT */
+			register_nav_menus( array(
+				'primary' => esc_html__( 'Principal', 'mu-domain' ),
+				'secondary' => esc_html__( 'Secundario', 'mu-domain' ),
+			) );
+			add_theme_support('menus');
+			add_theme_support('post-thumbnails');
+			add_theme_support('responsive-embeds');
+
+		/* ACF */
+			if ( class_exists('ACF') )
+			{
+				/* Configuración  */
+				acf_add_options_page(	array(
+											'page_title'  => __('Configuración','mu-domain'),
+											'menu_title' => __('Configuración','mu-domain'),
+											'menu_slug'  => 'theme-settings',
+											'capability' => 'edit_posts',
+											'redirect'  => false
+										)
+				);
+
+				/* Recupera la configuración */
+				global $theme_options;
+				$theme_options = get_fields('option');
+				if(!empty($theme_options))
+				{
+					foreach ($theme_options as $k => $v)
+					{
+						global ${$k};
+						${$k} = $v;
+					}
+				}
+
+				// Google Map
+				acf_update_setting('google_api_key', $google_api_key);
+
+				add_filter('acf/settings/row_index_offset', '__return_zero');
+			}
+
+
+		/* --- */
+	}
+	add_action('after_setup_theme', 'mu\init\after_setup_theme');
+/* --- */

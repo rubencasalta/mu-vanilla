@@ -1,27 +1,17 @@
 <?php get_header(); ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-<div class="container">
-	<div class="row">
-		<div class="article col-md-8">
-			<article class="front-page">
-				<?php the_title( '<h2 class="front-page__title">', '</h2>' ); ?>
-				<?php if (has_post_thumbnail( $post->ID ) ): ?>
-					<?php the_post_thumbnail('header', array('class'=>'front-page__image img-fluid')) ?>
-				<?php endif; ?>
-
-				<div class="front-page__content">
-					<?php the_content() ?>
-				</div>
-			</article>
-		</div>
-		<div class="article col-md-2">
-
-		</div>
-	</div>
-</div>
-
-
+	<?php $blocks = parse_blocks( get_the_content() ); ?>
+	<?php foreach ( $blocks as $block ) : ?>
+		<?php if(empty($block['blockName'])) continue; ?>
+		<?php if (preg_match('#^acf/mu-#', $block['blockName']) === 1) : ?>
+			<?=render_block( $block )?>
+		<?php else : ?>
+			<div class="container">
+				<?=apply_filters( 'the_content', render_block( $block ) )?>
+			</div>
+		<?php endif; ?>
+	<?php endforeach; ?>
 
 <?php endwhile; else : ?>
 
