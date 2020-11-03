@@ -13,11 +13,11 @@
 
 <body <?php body_class(); ?>>
 
-	<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top" role="navigation">
+	<nav class="menu-header navbar navbar-expand-md navbar-dark bg-dark sticky-top" role="navigation">
 		<div class="container">
 			<div class="navbar-brand">
-				<a class="site-title navbar-brand__title" href="<?php echo esc_html( bloginfo('template_url') ); ?>">
-					<img class="img-fluid navbar-brand__logo" src="<?php echo esc_html( bloginfo('template_url') ); ?>/assets/theme/images/logo.png" alt="<?php esc_url(bloginfo('name')); ?>">
+				<a class="site-title navbar-brand__title" href="<?=get_home_url()?>">
+					<img class="img-fluid navbar-brand__logo" src="<?=esc_html( bloginfo('template_url') )?>/assets/theme/images/logo.png" alt="<?php esc_url(bloginfo('name')); ?>">
 				</a>
 			</div>
 

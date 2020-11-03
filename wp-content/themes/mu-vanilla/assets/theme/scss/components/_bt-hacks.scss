@@ -1,0 +1,39 @@
+$menu-header-link: rgba(255, 255, 255, 1);
+$menu-header-link-active: rgba(255, 187, 0, 1);
+$menu-header-border: rgba(255, 187, 0, 1);
+
+.menu-header
+{
+	border-bottom: 2px solid $menu-header-border;
+
+	.navbar-nav
+	{
+		.nav-link
+		{
+			color: $menu-header-link;
+
+			&.active,
+			&.show
+			{
+				color: $menu-header-link-active;
+			}
+		}
+
+		.active
+		{
+			.nav-link
+			{
+				color: $menu-header-link-active;
+			}
+		}
+
+		.show
+		{
+			.nav-link
+			{
+				color: $menu-header-link-active;
+			}
+		}
+
+	}
+}
