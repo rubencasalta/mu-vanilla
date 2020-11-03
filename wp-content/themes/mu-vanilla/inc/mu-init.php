@@ -11,22 +11,42 @@
 		add_action( 'after_setup_theme', 'mu\init\theme_load_theme_textdomain' );
 	// ---
 
-    // Imagenes
+
+    /* Imagenes
 		add_filter( 'big_image_size_threshold', '__return_false' );
         add_filter( 'intermediate_image_sizes_advanced', function ( $sizes ) {
 
-			// Eliminar los tamaños por defecto de WP
-				unset( $sizes['2048x2048'] );
-				unset( $sizes['1536x1536'] );
-				unset( $sizes['thumbnail'] );
-				unset( $sizes['medium'] );
-				unset( $sizes['medium_large'] );
-				unset( $sizes['large'] );
-			// ---
+			unset( $sizes['2048x2048'] );
+			unset( $sizes['1536x1536'] );
+			unset( $sizes['thumbnail'] );
+			unset( $sizes['medium'] );
+			unset( $sizes['medium_large'] );
+			unset( $sizes['large'] );
 
             return $sizes;
 		} );
-	// ---
+	*/
+
+		function set_media()
+		{
+			/* Tamaños por defecto */
+			update_option('thumbnail_size_w', 128);
+			update_option('thumbnail_size_h', 128);
+			update_option('thumbnail_crop', TRUE);
+
+			update_option('medium_size_w', 600);
+			update_option('medium_size_h', 600);
+			update_option('medium_crop', TRUE);
+
+			update_option('medium_large_size_w', 800);
+			update_option('medium_large_size_h', 800);
+			update_option('medium_large_crop', TRUE);
+
+			update_option('large_size_w', 1200);
+			update_option('large_size_h', 1200);
+			update_option('large_crop', TRUE);
+		}
+		add_action('init', 'mu\init\set_media');
 
 	/* SETUP */
 	function after_setup_theme()

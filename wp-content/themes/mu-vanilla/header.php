@@ -13,7 +13,7 @@
 
 <body <?php body_class(); ?>>
 
-	<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top" role="navigation">
+	<nav class="menu-header navbar navbar-expand-md navbar-dark bg-dark sticky-top" role="navigation">
 		<div class="container">
 			<div class="navbar-brand">
 				<a class="site-title navbar-brand__title" href="<?=get_home_url()?>">
