@@ -55,15 +55,9 @@
 
 
 	// Media
-		function jpeg_quality()
-		{
-			return 75;
-		}
-		add_filter( 'jpeg_quality', 'mu\jpeg_quality');
-
 		function set_media()
 		{
-			// Tamaños de imagenes
+			// Tamaños de imagenes extra
 				add_image_size( 'header', 1200, 675, TRUE ); // Para las cabeceras
 				add_image_size( 'list', 600, 375, TRUE ); // Para los listados
 		}
