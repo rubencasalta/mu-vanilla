@@ -12,4 +12,4 @@ Trae un par de bloques de **Gutenberg** creados con ACF.  Con el tiempo segurame
 
 
 
-> Si eres un ser mas extraño que _Carmen de Mairena_ y has probado este tema házmelo saber: [Rubén Casalta](mailto:ruben.casalta@gmail.com)
+> Si eres un ser más extraño que _Carmen de Mairena_ y has probado este tema házmelo saber: [Rubén Casalta](mailto:ruben.casalta@gmail.com)
