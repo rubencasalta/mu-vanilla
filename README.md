@@ -1,5 +1,6 @@
 # Musca Vanilla
 Es un theme para wordpress que me sirve de base para desarrollar el resto.
+Trae un par de bloques de Gutenberg (_una **n** antes de una **b** OMG_) creados con ACF. Con el tiempo seguramente iré añadiendo algunos más.
 
 ## Instalación
 * Clonar el **repositorio** en la carpeta que más te guste.
