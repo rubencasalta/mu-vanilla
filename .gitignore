@@ -4,6 +4,8 @@
 !.editorconfig
 !README.md
 !.htaccess
+!package.json
+!gulpfile.js
 node_modules
 wp-content/*
 
