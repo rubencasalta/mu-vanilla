@@ -1,5 +1,5 @@
 # Musca Vanilla
-Es un tema para wordpress que me sirve de base para desarrollar el resto.
+Es un tema para wordpress que me sirve de base para desarrollar el resto. Si te puede servir de algún modo ya me sentiré satisfecho.
 
 Trae un par de bloques de **Gutenberg** creados con ACF.  Con el tiempo seguramente iré añadiendo algunos más.
 
