@@ -1,14 +1,14 @@
 # Musca Vanilla
-Es un theme para wordpress que me sirve de base para desarrollar el resto.
+Es un tema para wordpress que me sirve de base para desarrollar el resto.
 
-Trae un par de bloques de Gutenberg (_una **n** antes de una **b** OMG_) creados con ACF. Con el tiempo seguramente iré añadiendo algunos más.
+Trae un par de bloques de **Gutenberg** creados con ACF.  Con el tiempo seguramente iré añadiendo algunos más.
 
 ## Instalación
 * Clonar el **repositorio** en la carpeta que más te guste.
 * Instalar wordpress como lo haría _Bertín Osborne_ en la carpeta de clonación.
-* Instalar el **ACF Pro** y activarlo.
+* Instalar el **ACF Pro** y activarlo (_para los bloques de Gutenberg_).
 * Activar **mu-vanilla**.
-* Borrar los **pluggins** y **themas extras** innecesarios.
+* Borrar los **pluggins** y **temas** innecesarios.
 
 
 
