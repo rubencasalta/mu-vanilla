@@ -7,6 +7,7 @@
 	require_once( __DIR__ . '/inc/mu-init.php');
 	require_once( __DIR__ . '/inc/mu-junk.php');
 	require_once( __DIR__ . '/inc/mu-admin.php');
+	require_once( __DIR__ . '/inc/mu-login.php');
 	require_once( __DIR__ . '/inc/class-wp-bootstrap-navwalker.php');
 	require_once( __DIR__ . '/inc/johnbillion/extended-cpts/extended-cpts.php');
 	require_once( __DIR__ . '/mu-blocks/mu-blocks.php');
