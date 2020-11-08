@@ -1,14 +1,14 @@
-//out: style.min.css, compress: true
+//out: style.min.css, compress: true, autoprefixer: last 4 versions
 
 .mu-block-image-background
 {
     margin: 0;
 	position: relative;
-	font-size: 1em;
+	font-size: 1rem;
 
 	@media (max-width: 768px) {
 
-		font-size: 0.8em;
+		font-size: 0.9em;
 
 	}
 
@@ -38,7 +38,7 @@
 			h2
 			{
 				font-size: 2.5em;
-				font-weight: 600;
+				font-weight: 400;
 			}
 
 			p
