@@ -5,10 +5,10 @@
 @import "components/wp-block-library";
 @import "components/menu.scss";
 
-
 body
 {
 	font-family: $font-primary;
 	font-size: 1em;
+	margin: 0;
+	padding: 10px;
 }
-
