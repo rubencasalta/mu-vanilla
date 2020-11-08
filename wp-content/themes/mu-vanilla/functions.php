@@ -22,10 +22,10 @@
 	{
 		// CSS
 			// Theme y Bootstrap
-			wp_register_style( 'theme', get_template_directory_uri() . '/assets/theme/css/theme.min.css', array(), NULL, 'all' );
+			wp_register_style( 'theme', get_template_directory_uri() . '/assets/css/theme.min.css', array(), NULL, 'all' );
 
 			// Hay veces que el cliente quiere tocar css.
-			wp_register_style( 'custom', get_template_directory_uri() . '/assets/theme/css/custom.css', array(), NULL, 'all' );
+			wp_register_style( 'custom', get_template_directory_uri() . '/assets/css/custom.css', array(), NULL, 'all' );
 
 			// Encolando estilos.
 			wp_enqueue_style( array('theme', 'custom') );
@@ -36,7 +36,7 @@
 			wp_register_script('bootstrap-cdn', 'https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js', '', '0', TRUE);
 
 			// Theme
-			wp_register_script( 'theme', get_template_directory_uri() . '/assets/theme/js/theme.js', FALSE, NULL, TRUE);
+			wp_register_script( 'theme', get_template_directory_uri() . '/assets/js/theme.js', FALSE, NULL, TRUE);
 
 			// Install jQuery 3.4.1 - Google CDN
     		wp_deregister_script('jquery');

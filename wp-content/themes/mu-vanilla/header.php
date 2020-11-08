@@ -3,7 +3,7 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php echo bloginfo('charset'); ?>">
-	<title><?php wp_title('|',true,'right'); ?> <?php bloginfo('name'); ?></title>
+	<title><?php wp_title('|',true,'right'); ?><?php bloginfo('name'); ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<?php wp_head(); ?>
@@ -17,7 +17,7 @@
 		<div class="container">
 			<div class="navbar-brand">
 				<a class="site-title navbar-brand__title" href="<?=get_home_url()?>">
-					<img class="img-fluid navbar-brand__logo" src="<?=esc_html( bloginfo('template_url') )?>/assets/theme/images/logo.png" alt="<?php esc_url(bloginfo('name')); ?>">
+					<img class="img-fluid navbar-brand__logo" src="<?=esc_html( bloginfo('template_url') )?>/assets/images/logo.png" alt="<?php esc_url(bloginfo('name')); ?>">
 				</a>
 			</div>
 

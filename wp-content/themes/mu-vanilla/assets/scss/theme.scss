@@ -1,0 +1,26 @@
+// out: ../css/theme.min.css, compress: true, autoprefixer: last 2 versions
+
+@import "components/bootstrap";
+@import "components/fonts";
+@import "components/wp-block-library";
+@import "components/menu.scss";
+
+
+body
+{
+    font-family: $font-primary;
+}
+
+.navbar-brand
+{
+	&__title
+	{
+		margin: 0;
+	}
+
+	&__logo
+	{
+		max-height: 2em;
+	}
+
+}
