@@ -34,7 +34,7 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
+            "return_format": "id",
             "preview_size": "medium",
             "library": "all",
             "min_width": "",
@@ -139,7 +139,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/mu-image-background"
+                "value": "all"
             }
         ]
     ],
@@ -151,5 +151,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1604247784
+    "modified": 1604857919
 }

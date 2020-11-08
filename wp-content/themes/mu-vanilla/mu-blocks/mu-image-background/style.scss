@@ -2,28 +2,29 @@
 
 .mu-block-image-background
 {
-    margin: 0;
 	position: relative;
+	overflow: hidden;
 	font-size: 1rem;
 
-	@media (max-width: 768px) {
-
-		font-size: 0.9em;
-
+	.capsule-background
+	{
+		position: absolute;
+		left: -5px;
+		right: -5px;
+		top: -5px;
+		bottom: -5px;
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+		//filter: blur(1px);
 	}
-
-    &.no-margin
-    {
-        margin: 0;
-    }
 
     .capsule-content
     {
+		position: relative;
         display: table;
-        width: 100%;
+        //width: 100%;
         min-height: 60vh;
-        z-index: 1;
-        position: relative;
 
         .capsule-inner
         {
@@ -52,10 +53,6 @@
 			}
 		}
 
-        background-position: center center;
-        background-repeat: no-repeat;
-		background-size: cover;
-
 		@media (max-width: 768px) {
 
 			.capsule-inner
@@ -64,7 +61,18 @@
 			}
 
 		}
-    }
+	}
+
+	@media (max-width: 768px) {
+
+		font-size: 0.9em;
+
+	}
+
+    &.no-margin
+    {
+        margin: 0;
+	}
 
     &.height-big
     {
@@ -73,7 +81,6 @@
             min-height: 80vh;
         }
     }
-
 
     &.horizontal-left
     {

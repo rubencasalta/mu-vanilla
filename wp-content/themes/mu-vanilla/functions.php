@@ -1,7 +1,5 @@
 <?php
 
-	// https://developer.wordpress.org/themes/
-
 	namespace mu;
 
 	require_once( __DIR__ . '/inc/mu-init.php');
@@ -12,23 +10,23 @@
 	require_once( __DIR__ . '/inc/johnbillion/extended-cpts/extended-cpts.php');
 	require_once( __DIR__ . '/mu-blocks/mu-blocks.php');
 
-
+	// CPTs
 	require_once( __DIR__ . '/mu-cpt/mu-story.php');
-
-
 
 
 	function add_theme_scripts()
 	{
 		// CSS
 			// Theme y Bootstrap
-			wp_register_style( 'theme', get_template_directory_uri() . '/assets/css/theme.min.css', array(), NULL, 'all' );
+			wp_register_style('bootstrap-cdn', 'https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css');
+			wp_register_style('fonts-cdn', 'https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat:wght@400;700&display=swap', array(), NULL, 'all' );
+			wp_register_style('theme', get_template_directory_uri() . '/assets/css/theme.min.css', array(), NULL, 'all' );
 
 			// Hay veces que el cliente quiere tocar css.
 			wp_register_style( 'custom', get_template_directory_uri() . '/assets/css/custom.css', array(), NULL, 'all' );
 
 			// Encolando estilos.
-			wp_enqueue_style( array('theme', 'custom') );
+			wp_enqueue_style( array('bootstrap-cdn', 'fonts-cdn', 'theme', 'custom') );
 		// ---
 
 		// JS
@@ -40,7 +38,7 @@
 
 			// Install jQuery 3.4.1 - Google CDN
     		wp_deregister_script('jquery');
-    		wp_register_script('jquery', ("https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"), false);
+    		wp_register_script('jquery', ("https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"), false);
 
 			// Encolar los JSs
 			wp_enqueue_script( array ( 'jquery', 'bootstrap-cdn', 'theme' ));
@@ -90,9 +88,3 @@
 		add_filter('custom_menu_order', 'mu\custom_menu_order');
 		add_filter('menu_order', 'mu\custom_menu_order');
 	// ---
-
-	function do_shortcode_gutemberg($block_content, $block)
-	{
-		return do_shortcode($block_content);
-	}
-	add_filter( 'render_block', 'mu\do_shortcode_gutemberg', 99, 2 );

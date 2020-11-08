@@ -33,7 +33,8 @@
 		<div class="container-fluid p-0">
 	<?php endif; ?>
 
-		<div class="capsule-content" style="background-image: url(<?=$image_background_image['url']?>)">
+		<div class="capsule-background" style="background-image: url(<?=wp_get_attachment_image_src($image_background_image,'mu-image-background')[0]?>)"></div>
+		<div class="capsule-content">
 			<div class="capsule-inner">
 				<?=$image_background_content?>
 			</div>

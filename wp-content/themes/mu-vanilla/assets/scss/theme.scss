@@ -1,7 +1,8 @@
 // out: ../css/theme.min.css, compress: true, autoprefixer: last 4 versions
 
-@import "components/bootstrap";
-@import "components/fonts";
+@import "components/variables";
+//@import "components/_style.min.css";
+@import "components/bootstrap-hacks";
 @import "components/wp-block-library";
 @import "components/menu.scss";
 
