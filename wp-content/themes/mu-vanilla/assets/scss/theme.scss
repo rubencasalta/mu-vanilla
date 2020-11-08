@@ -8,19 +8,7 @@
 
 body
 {
-    font-family: $font-primary;
+	font-family: $font-primary;
+	font-size: 1em;
 }
 
-.navbar-brand
-{
-	&__title
-	{
-		margin: 0;
-	}
-
-	&__logo
-	{
-		max-height: 2em;
-	}
-
-}

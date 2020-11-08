@@ -6,6 +6,17 @@ $menu-header-border: rgba(255, 187, 0, 1);
 {
 	border-bottom: 2px solid $menu-header-border;
 
+	.navbar-brand
+	{
+		//&__title{}
+
+		&__logo
+		{
+			max-height: 2em;
+		}
+
+	}
+
 	.navbar-nav
 	{
 		.nav-link
