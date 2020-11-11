@@ -78,9 +78,9 @@
                 "id": ""
             },
             "choices": {
-                "horizontal-left": "Izquierda",
-                "horizontal-center": "Centrado",
-                "horizontal-right": "Derecha"
+                "mu-block-image-background--horizontal-left": "Izquierda",
+                "mu-block-image-background--horizontal-center": "Centrado",
+                "mu-block-image-background--horizontal-right": "Derecha"
             },
             "allow_null": 0,
             "other_choice": 0,
@@ -103,9 +103,9 @@
                 "id": ""
             },
             "choices": {
-                "vertical-top": "Arriba",
-                "vertical-middle": "Medio",
-                "vertical-bottom": "Abajo"
+                "mu-block-image-background--vertical-top": "Arriba",
+                "mu-block-image-background--vertical-middle": "Medio",
+                "mu-block-image-background--vertical-bottom": "Abajo"
             },
             "allow_null": 0,
             "other_choice": 0,
@@ -139,7 +139,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "all"
+                "value": "acf\/mu-image-background"
             }
         ]
     ],
@@ -151,5 +151,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1604857919
+    "modified": 1605101868
 }

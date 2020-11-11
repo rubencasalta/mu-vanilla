@@ -1,12 +1,14 @@
-//out: style.min.css, compress: true
+//out: false
 
-.mu-block-text
+$name: mu-block-text;
+
+.#{$name}
 {
 	margin-bottom: 30px;
 	background-color: #fafafa;
 	font-size: 1rem;
 
-	.mu-block-text__content
+	.#{$name}__content
 	{
 		p
 		{

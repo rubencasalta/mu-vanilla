@@ -33,7 +33,7 @@
 		<div class="container-fluid p-0">
 	<?php endif; ?>
 
-		<div class="<?=$name?>__content align-self-center p-3">
+		<div class="<?=$name?>__content align-self-center py-4">
 			<?=$text_content?>
 		</div>
 

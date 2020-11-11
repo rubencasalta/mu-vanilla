@@ -23,9 +23,9 @@
 	// ---
 
 	// Encolar los assets
-		add_action( 'enqueue_block_assets', function() use ( $args ) {
-			wp_enqueue_style( 'block-'.$args['name'], get_stylesheet_directory_uri() . '/mu-blocks/'.$args['name'].'/style.min.css', array() );
-		});
+//		add_action( 'enqueue_block_assets', function() use ( $args ) {
+//			wp_enqueue_style( 'block-'.$args['name'], get_stylesheet_directory_uri() . '/mu-blocks/'.$args['name'].'/style.min.css', array() );
+//		});
 	// ---
 
 	// Añadir tamaños de imágenes
