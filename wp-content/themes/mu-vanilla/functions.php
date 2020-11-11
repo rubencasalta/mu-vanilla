@@ -16,6 +16,11 @@
 
 	function add_theme_scripts()
 	{
+		// Se eliminan los css de los bloques Gutenberg que trae por defeto Wordpress
+		wp_dequeue_style( 'wp-block-library' );
+		wp_dequeue_style( 'wp-block-library-theme' );
+		wp_dequeue_style( 'wc-block-style' );
+
 		// CSS
 			// Theme y Bootstrap
 			wp_register_style('bootstrap-cdn', 'https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css');

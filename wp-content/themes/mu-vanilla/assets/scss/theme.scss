@@ -4,6 +4,8 @@
 
 // Bloques de ACF.
 @import "../../mu-blocks/style";
+// Bloques de gutenberg que trae Wordpress
+@import "../../../../../wp-includes/css/dist/block-library/style.min.css";
 
 
 @import "components/bootstrap-hacks";
