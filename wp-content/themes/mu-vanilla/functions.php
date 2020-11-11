@@ -36,7 +36,7 @@
 			// Theme
 			wp_register_script( 'theme', get_template_directory_uri() . '/assets/js/theme.js', FALSE, NULL, TRUE);
 
-			// Install jQuery 3.4.1 - Google CDN
+			// Install jQuery - Mejora bastante el pageSpeed. Las pruebas que he hecho, mejora como un 15%.
     		wp_deregister_script('jquery');
     		wp_register_script('jquery', ("https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"), false);
 
