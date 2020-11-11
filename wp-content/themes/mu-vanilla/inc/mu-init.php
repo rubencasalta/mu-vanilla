@@ -2,6 +2,8 @@
 
 	namespace mu\init;
 
+	if (!defined('AUTOSAVE_INTERVAL')) define('AUTOSAVE_INTERVAL', 300);
+	if (!defined('WP_POST_REVISIONS')) define('WP_POST_REVISIONS', false);
 
 	// Inicializar i18n
 		function theme_load_theme_textdomain()
@@ -51,7 +53,7 @@
 	/* SETUP */
 	function after_setup_theme()
 	{
-		show_admin_bar(false);
+		//show_admin_bar(false);
 
 		/* WP SUPPORT */
 			register_nav_menus( array(

@@ -1,10 +1,20 @@
-$menu-header-link: rgba(255, 255, 255, 1);
-$menu-header-link-active: rgba(255, 187, 0, 1);
-$menu-header-border: rgba(255, 187, 0, 1);
+// out: false
 
 .menu-header
 {
 	border-bottom: 2px solid $menu-header-border;
+	font-size: 1rem;
+
+	.navbar-brand
+	{
+		//&__title{}
+
+		&__logo
+		{
+			max-height: 2em;
+		}
+
+	}
 
 	.navbar-nav
 	{

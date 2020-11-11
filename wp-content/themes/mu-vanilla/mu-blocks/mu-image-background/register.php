@@ -27,3 +27,9 @@
 			wp_enqueue_style( 'block-'.$args['name'], get_stylesheet_directory_uri() . '/mu-blocks/'.$args['name'].'/style.min.css', array() );
 		});
 	// ---
+
+	// Añadir tamaños de imágenes
+		add_action('init', function(){
+			add_image_size('mu-image-background', 1300, 800, TRUE);
+		});
+	// ---
