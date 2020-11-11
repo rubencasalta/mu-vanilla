@@ -1,6 +1,8 @@
 <?php get_header(); ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
+<section>
+	<article>
 	<?php $blocks = parse_blocks( get_the_content() ); ?>
 	<?php foreach ( $blocks as $block ) : ?>
 		<?php if(empty($block['blockName'])) continue; ?>
@@ -12,6 +14,29 @@
 			</div>
 		<?php endif; ?>
 	<?php endforeach; ?>
+	</article>
+</section>
+
+	<!--div class="container">
+		<section class="row">
+			<article class="col-md-6">
+				<h2>Notícia 0 Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore sed veritatis maxime soluta eaque voluptatem illo eos a dignissimos excepturi quibusdam voluptates, esse, amet beatae atque, quia dolore possimus nesciunt?</p>
+			</article>
+			<article class="col-md-6">
+				<h2>Notícia 1 Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore sed veritatis maxime soluta eaque voluptatem illo eos a dignissimos excepturi quibusdam voluptates, esse, amet beatae atque, quia dolore possimus nesciunt?</p>
+			</article>
+			<article class="col-md-6">
+				<h2>Notícia 2 Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore sed veritatis maxime soluta eaque voluptatem illo eos a dignissimos excepturi quibusdam voluptates, esse, amet beatae atque, quia dolore possimus nesciunt?</p>
+			</article>
+			<article class="col-md-6">
+				<h2>Notícia 3 Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore sed veritatis maxime soluta eaque voluptatem illo eos a dignissimos excepturi quibusdam voluptates, esse, amet beatae atque, quia dolore possimus nesciunt?</p>
+			</article>
+		</section>
+	</div-->
 
 <?php endwhile; else : ?>
 
