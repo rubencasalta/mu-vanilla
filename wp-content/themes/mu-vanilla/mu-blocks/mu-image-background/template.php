@@ -35,9 +35,9 @@
 
 		<div class="<?=$name?>__capsule-background" style="background-image: url(<?=wp_get_attachment_image_src($image_background_image,'mu-image-background')[0]?>)"></div>
 		<article class="<?=$name?>__capsule-content">
-			<div class="<?=$name?>__capsule-content-inner">
+			<section class="<?=$name?>__capsule-content-inner">
 				<?=$image_background_content?>
-			</div>
+			</section>
 		</article>
 
     </section>
