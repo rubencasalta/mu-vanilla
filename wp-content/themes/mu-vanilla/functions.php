@@ -23,7 +23,7 @@
 
 		// CSS
 			// Theme y Bootstrap
-			wp_register_style('bootstrap-cdn', 'https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css');
+			//wp_register_style('bootstrap-cdn', 'https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css');
 			wp_register_style('fonts-cdn', 'https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat:wght@400;700&display=swap', array(), NULL, 'all' );
 			wp_register_style('theme', get_template_directory_uri() . '/assets/css/theme.min.css', array(), NULL, 'all' );
 
@@ -31,7 +31,7 @@
 			wp_register_style( 'custom', get_template_directory_uri() . '/assets/css/custom.css', array(), NULL, 'all' );
 
 			// Encolando estilos.
-			wp_enqueue_style( array('bootstrap-cdn', 'fonts-cdn', 'theme', 'custom') );
+			wp_enqueue_style( array('fonts-cdn', 'theme', 'custom') );
 		// ---
 
 		// JS
@@ -43,7 +43,7 @@
 
 			// Install jQuery - Mejora bastante el pageSpeed. Las pruebas que he hecho, mejora como un 15%.
     		wp_deregister_script('jquery');
-    		wp_register_script('jquery', ("https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"), false);
+    		wp_register_script('jquery', ("https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/js/bootstrap.bundle.min.js"), false);
 
 			// Encolar los JSs
 			wp_enqueue_script( array ( 'jquery', 'bootstrap-cdn', 'theme' ));

@@ -1,8 +1,8 @@
 {
-  "name": "mu-vanilla",
+  "name": "musca",
   "version": "1.0.0",
-  "description": "Es un theme para wordpress que me sirve de base para desarrollar el resto.",
-  "main": "index.js",
+  "description": "Es un tema para wordpress que me sirve de base para desarrollar el resto. Si te puede servir de algún modo ya me sentiré satisfecho.",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,11 +20,10 @@
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
-    "gulp-concat": "^2.6.1",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.1.0"
   },
   "dependencies": {
-    "bootstrap": "^4.5.3"
+    "bootstrap": "^5.0.0-alpha3"
   }
 }

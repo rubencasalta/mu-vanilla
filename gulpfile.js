@@ -4,7 +4,7 @@ const	gulp = require('gulp'),
 		autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('sass', ()=>
-	gulp.src('wp-content/themes/mu-vanilla/assets/theme/scss/theme.scss')
+	gulp.src('wp-content/themes/mu-vanilla/assets/scss/theme.scss')
 	.pipe(rename('theme.min.css'))
 	.pipe(sass({
 		outputStyle: "compressed",
@@ -13,9 +13,10 @@ gulp.task('sass', ()=>
 	.pipe(autoprefixer({
 		versions: ['last 2 browsers']
 	}))
-	.pipe(gulp.dest('wp-content/themes/mu-vanilla/assets/theme/css/'))
+	.pipe(gulp.dest('wp-content/themes/mu-vanilla/assets/css/'))
 );
 
 gulp.task('default', ()=>{
-	gulp.watch('wp-content/themes/mu-vanilla/assets/theme/scss/**/*.scss', gulp.series('sass'));
+	gulp.watch('wp-content/themes/mu-vanilla/mu-blocks/**/*.scss', gulp.series('sass'));
+	gulp.watch('wp-content/themes/mu-vanilla/assets/scss/**/*.scss', gulp.series('sass'));
 });
