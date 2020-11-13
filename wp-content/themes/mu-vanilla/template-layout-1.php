@@ -21,6 +21,7 @@
 						<p class="m-0"><small><date>June 03, 2020</date></small></p>
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque recusandae alias aliquam necessitatibus id inventore consectetur delectus unde doloribus, nisi, quod iure, dolorem blanditiis voluptate fugiat? Dicta sint dolores accusamus!</p>
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, et! Vel voluptas enim veniam velit. Suscipit obcaecati natus earum rem voluptas dignissimos hic aspernatur nobis, fugit, ipsa optio! Nisi, beatae.</p>
+						<a href="#" class="btn btn-primary">sfsdfasdf</a>
 					</article>
 					<article class="col-md-6 mb-3">
 						<h3 class="mb-2">Notícia 2</h3>
