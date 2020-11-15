@@ -28,19 +28,19 @@
 <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
 
 	<?php if( !$fullsize ) : ?>
-		<div class="container">
+	<section class="container">
 	<?php else : ?>
-		<div class="container-fluid p-0">
+	<section class="container-fluid p-0">
 	<?php endif; ?>
 
-		<div class="capsule-background" style="background-image: url(<?=wp_get_attachment_image_src($image_background_image,'mu-image-background')[0]?>)"></div>
-		<div class="capsule-content">
-			<div class="capsule-inner">
+		<div class="<?=$name?>__capsule-background" style="background-image: url(<?=wp_get_attachment_image_src($image_background_image,'mu-image-background')[0]?>)"></div>
+		<article class="<?=$name?>__capsule-content">
+			<section class="<?=$name?>__capsule-content-inner">
 				<?=$image_background_content?>
-			</div>
-		</div>
+			</section>
+		</article>
 
-    </div>
+    </section>
 
 
 </div>

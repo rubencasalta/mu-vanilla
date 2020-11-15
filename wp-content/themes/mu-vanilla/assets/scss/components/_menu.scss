@@ -27,6 +27,11 @@
 			{
 				color: $menu-header-link-active;
 			}
+
+			&:hover
+			{
+				color: $menu-header-link-hover;
+			}
 		}
 
 		.active
