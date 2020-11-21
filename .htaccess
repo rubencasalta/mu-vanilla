@@ -1,3 +1,10 @@
+# Begin Leverage Browser Caching
+<filesMatch ".(css|jpg|jpeg|png|gif|js|ico|woff|woff2|ttf)$">
+Header set Cache-Control "max-age=2592000, public"
+</filesMatch>
+# End Leverage Browser Caching
+
+
 
 # BEGIN WordPress
 # Las directivas (líneas) entre «BEGIN WordPress» y «END WordPress» son

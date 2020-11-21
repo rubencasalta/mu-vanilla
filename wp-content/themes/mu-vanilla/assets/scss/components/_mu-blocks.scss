@@ -2,10 +2,16 @@
 
 .mu-block-image-background {
 
-	margin-bottom: 30px;
-
 	.mu-block-image-background__capsule-background {
 		background-position: bottom center;
 	}
 
+}
+
+
+.mu-block-text {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+	background-color: rgba(255, 187, 0, 0.3);
 }
