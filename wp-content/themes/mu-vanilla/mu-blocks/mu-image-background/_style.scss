@@ -6,7 +6,6 @@ $name: mu-block-image-background;
 {
 	position: relative;
 	overflow: hidden;
-	font-size: 1rem;
 
 	.#{$name}__capsule-background
 	{
@@ -18,24 +17,14 @@ $name: mu-block-image-background;
 		background-size: cover;
 		background-position: center center;
 		background-repeat: no-repeat;
-		//filter: blur(1px);
 	}
 
-    .#{$name}__capsule-content
-    {
+	.#{$name}__capsule-content
+	{
 		position: relative;
-        display: table;
-        width: 100%;
-        min-height: 60vh;
-
-		@media (max-width: 768px) {
-
-			.#{$name}__capsule-content-inner
-			{
-				padding: 5%;
-			}
-
-		}
+		display: table;
+		width: 100%;
+		min-height: 45vh;
 	}
 
 	.#{$name}__capsule-content-inner
@@ -48,15 +37,21 @@ $name: mu-block-image-background;
 		text-shadow: 0 0 4px #000;
 		color: #fff;
 
+		h1
+		{
+			font-size: 5em;
+			font-weight: 400;
+		}
+
 		h2
 		{
-			font-size: 2.5em;
+			font-size: 3em;
 			font-weight: 400;
 		}
 
 		p
 		{
-			font-size: 1em;
+			font-size: 1.5em;
 
 			&:last-child
 			{
@@ -65,10 +60,17 @@ $name: mu-block-image-background;
 		}
 	}
 
-
 	@media (max-width: 768px) {
 
-		font-size: 0.9em;
+		.#{$name}__capsule-content
+		{
+			min-height: 65vh;
+		}
+
+		.#{$name}__capsule-content-inner {
+			padding: 5%;
+			font-size: 0.8em;
+		}
 
 	}
 

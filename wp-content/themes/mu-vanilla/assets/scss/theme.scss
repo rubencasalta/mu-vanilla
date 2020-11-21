@@ -1,18 +1,23 @@
 // out: ../css/theme.min.css, compress: true, autoprefixer: last 4 versions
 
+// Variables
 @import "components/variables";
 
-// Bootstrap
+// Bootstrap SASS
 @import "../../../../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "components/bootstrap-hacks";
+
 // Bloques de ACF.
 @import "../../mu-blocks/style";
+@import "components/mu-blocks";
+
 // Bloques de gutenberg que trae Wordpress
 @import "../../../../../wp-includes/css/dist/block-library/style.min.css";
-
-
-@import "components/bootstrap-hacks";
 @import "components/wp-block-library";
+
+// Componentes
 @import "components/menu.scss";
+
 
 html
 {
