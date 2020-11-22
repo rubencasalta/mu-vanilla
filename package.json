@@ -18,12 +18,11 @@
   },
   "homepage": "https://github.com/rubencasalta/mu-vanilla#readme",
   "devDependencies": {
+    "bootstrap": "^4.5.3",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.1.0"
   },
-  "dependencies": {
-    "bootstrap": "^5.0.0-alpha3"
-  }
+  "dependencies": {}
 }
