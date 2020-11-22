@@ -2,6 +2,7 @@
 
 	namespace mu;
 
+	require_once( __DIR__ . '/inc/mu-utils.php');
 	require_once( __DIR__ . '/inc/mu-init.php');
 	require_once( __DIR__ . '/inc/mu-junk.php');
 	require_once( __DIR__ . '/inc/mu-admin.php');
@@ -46,7 +47,7 @@
     		wp_register_script('jquery', ("https://code.jquery.com/jquery-3.5.1.min.js"), false);
 
 			// Encolar los JSs
-			wp_enqueue_script( array ( 'jquery', 'bootstrap-cdn', 'theme' ));
+			wp_enqueue_script( array ( 'jquery', 'masonry', 'bootstrap-cdn', 'theme' ));
 		// ---
 	}
 	add_action( 'wp_enqueue_scripts', 'mu\add_theme_scripts' );
@@ -62,8 +63,8 @@
 		function set_media()
 		{
 			// Tamaños de imagenes extra
-				//add_image_size( 'header', 1200, 675, TRUE ); // Para las cabeceras
-				//add_image_size( 'list', 600, 375, TRUE ); // Para los listados
+				add_image_size( 'header', 1600, 700, TRUE ); // Imagen genérica para las cabeceras
+				add_image_size( 'list', 700, 300, TRUE ); // Imagen genérica para los listados
 		}
 		add_action('init', 'mu\set_media');
 	// ---
@@ -72,7 +73,7 @@
 		function remove_menu_pages()
 		{
 			// Posts / Entradas
-			remove_menu_page('edit.php');
+			//remove_menu_page('edit.php');
 			// Comentarios
 			remove_menu_page('edit-comments.php');
 		}

@@ -111,11 +111,11 @@ function add_rel_preload($html, $handle, $href, $media) {
 EOT;
 	return $html;
 }
-add_filter( 'style_loader_tag', 'mu\init\add_rel_preload', 10, 4 );
+//add_filter( 'style_loader_tag', 'mu\init\add_rel_preload', 10, 4 );
 
 function add_defer_attribute($tag, $handle) {
 	// add script handles to the array below
-	$scripts_to_defer = array('jquery', 'bootstrap-cdn', 'theme', 'contact-form-7');
+	$scripts_to_defer = array('jquery', 'masonry', 'bootstrap-cdn', 'theme', 'contact-form-7');
 
 	foreach($scripts_to_defer as $defer_script) {
 	   if ($defer_script === $handle) {
@@ -124,4 +124,4 @@ function add_defer_attribute($tag, $handle) {
 	}
 	return $tag;
  }
- add_filter('script_loader_tag', 'mu\init\add_defer_attribute', 10, 2);
+ //add_filter('script_loader_tag', 'mu\init\add_defer_attribute', 10, 2);
