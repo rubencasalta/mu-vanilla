@@ -1,5 +1,3 @@
-//out: false
-
 $name: mu-block-image-background;
 
 .#{$name}
@@ -29,7 +27,6 @@ $name: mu-block-image-background;
 
 	.#{$name}__capsule-content-inner
 	{
-		//background-color: rgba(255,255,255,0.5);
 		display: table-cell;
 		vertical-align: middle;
 		text-align: center;

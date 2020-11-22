@@ -8,8 +8,8 @@
 @import "components/bootstrap-hacks";
 
 // Bloques de ACF.
-@import "../../mu-blocks/style";
 @import "components/mu-blocks";
+@import "components/mu-blocks-custom";
 
 // Bloques de gutenberg que trae Wordpress
 @import "../../../../../wp-includes/css/dist/block-library/style.min.css";

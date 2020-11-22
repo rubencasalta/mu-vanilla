@@ -1,0 +1,32 @@
+// Animations
+@keyframes muImageBackgroundAnimation {
+	0%  { transform: scale(1); filter: blur(0px) contrast(100%) brightness(100%); }
+	100%  { transform: scale(1.01); filter: blur(2px) contrast(125%) brightness(125%); }
+}
+
+
+// Image Background
+.mu-block-image-background {
+
+	.mu-block-image-background__capsule-background {
+		background-position: bottom center;
+
+		animation-name: muImageBackgroundAnimation;
+		animation-duration: 3s;
+		animation-direction: alternate;
+		animation-iteration-count: infinite;
+		animation-fill-mode: both;
+	}
+
+}
+
+
+// Text
+.mu-block-text {
+
+	padding-top: 30px;
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+	background-color: rgba(255, 187, 0, 0.3);
+
+}
