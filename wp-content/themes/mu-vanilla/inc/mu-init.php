@@ -100,3 +100,28 @@
 	}
 	add_action('after_setup_theme', 'mu\init\after_setup_theme');
 /* --- */
+
+
+
+function add_rel_preload($html, $handle, $href, $media) {
+	if (is_admin())
+		return $html;
+	 $html = <<<EOT
+<link rel='preload' as='style' onload="this.onload=null;this.rel='stylesheet'" id='$handle' href='$href' type='text/css' media='all' /> \n
+EOT;
+	return $html;
+}
+add_filter( 'style_loader_tag', 'mu\init\add_rel_preload', 10, 4 );
+
+function add_defer_attribute($tag, $handle) {
+	// add script handles to the array below
+	$scripts_to_defer = array('jquery', 'bootstrap-cdn', 'theme', 'contact-form-7');
+
+	foreach($scripts_to_defer as $defer_script) {
+	   if ($defer_script === $handle) {
+		  return str_replace(' src', ' defer="defer" src', $tag);
+	   }
+	}
+	return $tag;
+ }
+ add_filter('script_loader_tag', 'mu\init\add_defer_attribute', 10, 2);

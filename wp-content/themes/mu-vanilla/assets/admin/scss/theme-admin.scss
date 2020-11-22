@@ -1,6 +1,7 @@
 //out: ../css/theme-admin.min.css,  compress: true
 
 @import url("https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap-grid.min.css");
+@import '../../scss/components/mu-blocks';
 
 /* Main column width */
 	.wp-block

@@ -7,7 +7,7 @@
 	// Cargar bloques de forma automática
 		$blocks_dir = get_template_directory() . '/mu-blocks/';
 		$arDir  = scandir( $blocks_dir );
-		$style_content = '';
+		$style_content = "// Fichero autogenerado por /mu-blocks/mu-blocks.php \n";
 
 		foreach ($arDir as $k => $block_name)
 		{
@@ -20,7 +20,7 @@
 				$style_content .= '@import "'.get_template_directory() . '/mu-blocks/'.$block_name.'/style";'."\n";
 			}
 		}
-		file_put_contents(get_template_directory() . '/mu-blocks/_style.scss', str_replace('\\', '/', $style_content) );
+		file_put_contents(get_template_directory() . '/assets/scss/components/_mu-blocks.scss', str_replace('\\', '/', $style_content) );
     // ---
 
 
