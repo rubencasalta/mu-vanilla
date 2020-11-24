@@ -11,7 +11,7 @@ gulp.task('sass', ()=>
 		sourceComments: false
 	}))
 	.pipe(autoprefixer({
-		versions: ['last 2 browsers']
+		versions: ['last 4 browsers']
 	}))
 	.pipe(gulp.dest('wp-content/themes/mu-vanilla/assets/css/'))
 );
